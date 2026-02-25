@@ -3,37 +3,10 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
-type SectionId = "home" | "projects" | "research" | "about";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/lib/projects";
 
-const projects = [
-  {
-    title: "Mirror",
-    subtitle: "AI Cosmetic Assistant",
-    description:
-      "Mobile assistant that analyzes facial features and suggests personalized products with Gemini-powered insights.",
-    tech: ["Expo", "Gemini API", "Flask", "Express", "MongoDB"],
-    links: [
-      { label: "GitHub", href: "https://github.com/Suhas8215/Mirror" },
-      { label: "Devpost", href: "https://devpost.com/software/mirror-yo9mcb" },
-    ],
-  },
-  {
-    title: "Meal Connect",
-    subtitle: "Food Redistribution Platform",
-    description:
-      "Connects restaurants and shelters with geospatial matching and LLM summaries to accelerate food redistribution.",
-    tech: ["Node.js", "TypeScript", "MongoDB", "Express", "Google Maps API"],
-    links: [{ label: "GitHub", href: "https://github.com/Suhas8215/MealConnect" }],
-  },
-  {
-    title: "Braingeneers",
-    subtitle: "Research Engineering Project",
-    description:
-      "Private research repo focused on scalable ML workflows and tooling for high-volume biomedical analysis.",
-    tech: ["Python", "ML Pipelines", "Data Engineering"],
-    links: [{ label: "Link coming soon", href: "" }],
-  },
-];
+type SectionId = "home" | "projects" | "research" | "about";
 
 const researchTracks = [
   {
@@ -200,68 +173,17 @@ export default function PortfolioPage() {
                 Projects
               </p>
               <h2 className="mt-2 font-[family-name:var(--font-sora)] text-3xl text-white md:text-4xl">
-                Featured Work
+                Featured Projects
               </h2>
             </div>
-            <p className="max-w-md text-sm text-slate-400">
-              Scroll through cards for a focused view of each build.
+            <p className="max-w-md text-sm text-slate-400 md:text-right">
+              Click any project card to view full details.
             </p>
           </div>
 
-          <div className="grid gap-5">
-            {projects.map((project, index) => (
-              <article
-                key={project.title}
-                className="group relative overflow-hidden rounded-3xl border border-blue-200/15 bg-[#0B1328] p-6 transition duration-500 hover:-translate-y-1 hover:border-blue-200/40 hover:shadow-[0_12px_40px_-22px_rgba(70,125,255,0.8)]"
-                style={{ transitionDelay: `${index * 80}ms` }}
-              >
-                <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-blue-500/20 blur-3xl transition group-hover:bg-blue-400/30" />
-                <div className="relative space-y-4">
-                  <div className="flex flex-wrap items-baseline justify-between gap-3">
-                    <div>
-                      <h3 className="font-[family-name:var(--font-sora)] text-2xl text-white">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm uppercase tracking-[0.16em] text-blue-200/80">
-                        {project.subtitle}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="max-w-3xl text-slate-300">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full border border-blue-200/25 bg-blue-300/10 px-3 py-1 text-xs text-blue-100"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex flex-wrap gap-3 pt-1">
-                    {project.links.map((link) =>
-                      link.href ? (
-                        <a
-                          key={link.label}
-                          href={link.href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="rounded-full border border-blue-300/40 px-4 py-2 text-sm text-blue-100 transition hover:border-blue-100 hover:bg-blue-400/20"
-                        >
-                          {link.label}
-                        </a>
-                      ) : (
-                        <span
-                          key={link.label}
-                          className="rounded-full border border-slate-500/40 px-4 py-2 text-sm text-slate-300"
-                        >
-                          {link.label}
-                        </span>
-                      )
-                    )}
-                  </div>
-                </div>
-              </article>
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </section>
