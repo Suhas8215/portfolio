@@ -42,6 +42,7 @@ const researchTracks = [
     authors:
       "Kaiwen Zhou, Shreedhar Jangam, Ashwin Nagarajan, Tejas Polu, Suhas Oruganti, Chengzhi Liu, Ching-Chen Kuo, Yuting Zheng, Sravana Narayanaraju, Xin Eric Wang",
     meta: "arXiv:2601.06663, 2026",
+    previewImage: "/safepro-preview.png",
     publication: "https://arxiv.org/pdf/2601.06663",
     publicationLabel: "PDF",
     citation: `@article{zhou2025safepro,
@@ -57,6 +58,7 @@ const researchTracks = [
       "Mouse-Guided Gaze: Semi-Supervised Learning of Intention-Aware Representations for Reading Detection",
     authors: "Seongsil Heo, Roberto Manduchi",
     meta: "arXiv:2509.19574, 2025",
+    previewImage: "/mouse-guided-gaze-preview.png",
     publication: "https://arxiv.org/abs/2509.19574v1",
     publicationLabel: "PDF",
   },
@@ -289,16 +291,13 @@ export default function PortfolioPage() {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="flex gap-4">
-                  <div className="h-24 w-40 shrink-0 overflow-hidden rounded-xl border border-blue-300/20 bg-[#0B1328] p-2">
-                    <div className="mb-2 inline-flex rounded-md border border-blue-200/25 bg-blue-300/10 px-2 py-0.5 text-[10px] font-semibold text-blue-100">
-                      arXiv
-                    </div>
-                    <div className="grid h-[68px] grid-cols-2 gap-1">
-                      <div className="rounded-md bg-blue-400/20" />
-                      <div className="rounded-md bg-blue-300/15" />
-                      <div className="rounded-md bg-blue-200/15" />
-                      <div className="rounded-md bg-blue-500/20" />
-                    </div>
+                  <div className="relative h-24 w-40 shrink-0 overflow-hidden rounded-xl border border-blue-300/20 bg-[#0B1328]">
+                    <Image
+                      src={track.previewImage}
+                      alt={`${track.title} publication preview`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="font-[family-name:var(--font-sora)] text-xl text-white">

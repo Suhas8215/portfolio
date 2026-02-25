@@ -15,10 +15,6 @@ export default function ResumePage() {
             Back to Portfolio
           </Link>
         </div>
-        <p className="text-slate-300">
-          Place your latest resume at <code>public/resume.pdf</code> to render
-          it in this viewer.
-        </p>
         <div className="h-[80vh] overflow-hidden rounded-2xl border border-blue-300/20 bg-[#0B1328]">
           <iframe
             src="/resume.pdf"
