@@ -157,28 +157,40 @@ export default function PortfolioPage() {
                 a
               </span>
               <svg
-                viewBox="0 0 40 16"
+                viewBox="0 0 44 16"
                 aria-hidden="true"
                 className="absolute -bottom-0.5 left-0 w-7 text-slate-100/90"
               >
                 <path
-                  d="M2 5.5c8.8 6 22.6 6 33.6 0"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M31.5 2.8 36 5.6l-4.9 1.5"
+                  d="M2 5.6c9 6.1 23.2 6.1 36.2 0"
                   stroke="currentColor"
                   strokeWidth="1.8"
                   fill="none"
                   strokeLinecap="round"
-                  strokeLinejoin="round"
+                />
+                <path
+                  d="M3.8 7.9c7.9 3.6 19.3 3.6 27.2 0"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M33.7 3.1 40.4 5.8"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M33.7 8.5 40.4 5.8"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  fill="none"
+                  strokeLinecap="round"
                 />
               </svg>
             </span>
-            <span className="text-lg text-slate-300">Amazon</span>
           </p>
           <div className="flex flex-wrap gap-3">
             <button
