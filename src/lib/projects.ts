@@ -39,8 +39,8 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "braingeneers",
-    title: "Braingeneers",
+    slug: "foundry",
+    title: "Foundry",
     subtitle: "RESEARCH ENGINEERING PROJECT",
     description:
       "Private research repo focused on scalable ML workflows and tooling for high-volume biomedical analysis.",

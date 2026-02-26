@@ -140,13 +140,10 @@ export default function PortfolioPage() {
       </header>
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-28 px-6 pb-24 pt-14">
-        <section id="home" className="reveal space-y-8">
-          <h1 className="max-w-4xl font-[family-name:var(--font-sora)] text-5xl font-semibold leading-tight text-white md:text-7xl">
-            Hi. I&apos;m Suhas.
+        <section id="home" className="reveal space-y-7">
+          <h1 className="max-w-4xl font-[family-name:var(--font-sora)] text-5xl font-semibold leading-[0.96] tracking-[-0.02em] text-white md:text-7xl">
+            Hi, I&apos;m Suhas.
           </h1>
-          <p className="text-2xl font-semibold text-slate-200 md:text-4xl">
-            Engineer. Innovator. Researcher.
-          </p>
           <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
             Building thoughtful software with AI, product, and research.
           </p>
@@ -311,18 +308,28 @@ export default function PortfolioPage() {
                 About
               </p>
               <h2 className="font-[family-name:var(--font-sora)] text-4xl font-semibold leading-tight text-white md:text-5xl">
-                I&apos;m an Engineer, Researcher, and Builder from the Bay Area.
+                I&apos;m a software engineer based in the Bay Area.
               </h2>
               <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
-                A third-year Computer Science student at UCSC working on AI
-                safety, multimodal systems, and human-in-the-loop AI. I enjoy
-                shipping practical products while keeping a strong research
-                lens.
+                I recently graduated in Computer Science from UC Santa Cruz and
+                will be joining Amazon as a Software Development Engineer in
+                July.
               </p>
               <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
-                Outside the lab, I like building side projects, mentoring
-                students, and exploring how to make emerging technologies useful
-                in the real world.
+                My background includes research in AI safety, interpretability,
+                and multimodal learning, which shaped how I think about
+                reliability and real-world deployment of intelligent systems.
+              </p>
+              <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
+                I&apos;m most energized by problems at the intersection of
+                large-scale systems and machine learning: building software that
+                scales while making sure the models behind it are robust and
+                well-understood.
+              </p>
+              <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
+                Outside of work, I build side projects, mentor students, and
+                explore how emerging technologies can move from research into
+                practical use.
               </p>
             </div>
           </div>
