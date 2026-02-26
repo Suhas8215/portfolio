@@ -47,4 +47,16 @@ export const projects: Project[] = [
     tags: ["Python", "ML Pipelines", "Data Engineering"],
     imageSrc: "/globe.svg",
   },
+  {
+    slug: "life-data-unifier",
+    title: "Life Data Unifier",
+    subtitle: "PERSONAL PRODUCTIVITY SYSTEM",
+    description:
+      "A local-first system that reconstructs a single truthful timeline of commitments across apps like Gmail and Calendar.",
+    tags: ["Python", "FastAPI", "Local-first", "Data Pipeline"],
+    imageSrc: "/projects/data.png",
+    links: {
+      github: "https://github.com/Suhas8215/Life-Data-Unifier",
+    },
+  },
 ];

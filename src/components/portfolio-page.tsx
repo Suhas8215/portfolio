@@ -150,6 +150,36 @@ export default function PortfolioPage() {
           <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
             Building thoughtful software with AI, product, and research.
           </p>
+          <p className="flex items-end gap-2 text-xl text-slate-200">
+            <span>SDE @</span>
+            <span className="relative inline-flex h-10 w-7 items-start justify-center">
+              <span className="font-[family-name:var(--font-sora)] text-3xl font-semibold leading-none text-slate-100">
+                a
+              </span>
+              <svg
+                viewBox="0 0 40 16"
+                aria-hidden="true"
+                className="absolute -bottom-0.5 left-0 w-7 text-slate-100/90"
+              >
+                <path
+                  d="M2 5.5c8.8 6 22.6 6 33.6 0"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M31.5 2.8 36 5.6l-4.9 1.5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            <span className="text-lg text-slate-300">Amazon</span>
+          </p>
           <div className="flex flex-wrap gap-3">
             <button
               onClick={() => scrollToSection("projects")}
